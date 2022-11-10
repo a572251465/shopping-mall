@@ -12,7 +12,7 @@ spring:
 
 # 设置端口
 server:
-  port: 8010
+  port: 8040
 
 # mybatis 配置
 mybatis-plus:
