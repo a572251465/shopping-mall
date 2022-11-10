@@ -8,11 +8,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * spu��Ϣ����
+ * spu信息介绍
  * 
  * @author lihh
  * @email 2495041749@qq.com
- * @date 2022-11-10 15:39:01
+ * @date 2022-11-10 17:03:35
  */
 @Data
 @TableName("pms_spu_info_desc")
@@ -20,12 +20,12 @@ public class SpuInfoDescEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * ��Ʒid
+	 * 商品id
 	 */
 	@TableId
 	private Long spuId;
 	/**
-	 * ��Ʒ����
+	 * 商品介绍
 	 */
 	private String decript;
 

@@ -7,11 +7,11 @@ import com.lihh.mall.product.entity.CommentReplayEntity;
 import java.util.Map;
 
 /**
- * ��Ʒ���ۻظ���ϵ
+ * 商品评价回复关系
  *
  * @author lihh
  * @email 2495041749@qq.com
- * @date 2022-11-10 15:39:01
+ * @date 2022-11-10 17:03:35
  */
 public interface CommentReplayService extends IService<CommentReplayEntity> {
 

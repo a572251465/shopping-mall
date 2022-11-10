@@ -8,11 +8,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * skuͼƬ
+ * sku图片
  * 
  * @author lihh
  * @email 2495041749@qq.com
- * @date 2022-11-10 15:39:01
+ * @date 2022-11-10 17:03:35
  */
 @Data
 @TableName("pms_sku_images")
@@ -29,15 +29,15 @@ public class SkuImagesEntity implements Serializable {
 	 */
 	private Long skuId;
 	/**
-	 * ͼƬ��ַ
+	 * 图片地址
 	 */
 	private String imgUrl;
 	/**
-	 * ����
+	 * 排序
 	 */
 	private Integer imgSort;
 	/**
-	 * Ĭ��ͼ[0 - ����Ĭ��ͼ��1 - ��Ĭ��ͼ]
+	 * 默认图[0 - 不是默认图，1 - 是默认图]
 	 */
 	private Integer defaultImg;
 

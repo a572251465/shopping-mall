@@ -5,6 +5,7 @@ import java.util.Map;
 
 
 import com.lihh.mall.commons.utils.PageUtils;
+import com.lihh.mall.commons.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,15 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.lihh.mall.product.entity.AttrAttrgroupRelationEntity;
 import com.lihh.mall.product.service.AttrAttrgroupRelationService;
-import com.lihh.mall.commons.utils.R;
 
 
 
 /**
+ * 属性&属性分组关联
  *
  * @author lihh
  * @email 2495041749@qq.com
- * @date 2022-11-10 15:39:01
+ * @date 2022-11-10 17:03:35
  */
 @RestController
 @RequestMapping("product/attrattrgrouprelation")

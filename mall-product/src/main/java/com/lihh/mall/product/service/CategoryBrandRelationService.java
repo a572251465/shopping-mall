@@ -7,11 +7,11 @@ import com.lihh.mall.product.entity.CategoryBrandRelationEntity;
 import java.util.Map;
 
 /**
-
+ * 品牌分类关联
  *
  * @author lihh
  * @email 2495041749@qq.com
- * @date 2022-11-10 15:39:01
+ * @date 2022-11-10 17:03:35
  */
 public interface CategoryBrandRelationService extends IService<CategoryBrandRelationEntity> {
 

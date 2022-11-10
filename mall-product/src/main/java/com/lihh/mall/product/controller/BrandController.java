@@ -19,10 +19,11 @@ import com.lihh.mall.commons.utils.R;
 
 
 /**
+ * 品牌
  *
  * @author lihh
  * @email 2495041749@qq.com
- * @date 2022-11-10 15:39:01
+ * @date 2022-11-10 17:03:35
  */
 @RestController
 @RequestMapping("product/brand")
@@ -36,6 +37,7 @@ public class BrandController {
     @RequestMapping("/list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = brandService.queryPage(params);
+
         return R.ok().put("page", page);
     }
 
