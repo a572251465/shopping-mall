@@ -8,7 +8,7 @@ spring:
     password: root
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.56.100:3306/mall-pms
+    url: jdbc:mysql://192.168.56.10:3306/mall-pms
 
 # 设置端口
 server:
@@ -16,7 +16,7 @@ server:
 
 # mybatis 配置
 mybatis-plus:
-  mapper-locations: classpath*:/mapper/**/*.xml
+  mapper-locations: classpath*:mapper/**/*.xml
 
 # 设置主键自增
   global-config:
