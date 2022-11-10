@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 import com.lihh.mall.product.entity.SysRoleMenuEntity;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,6 @@ public class SysRoleMenuController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("mallproduct:sysrolemenu:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = sysRoleMenuService.queryPage(params);
 
@@ -47,7 +46,6 @@ public class SysRoleMenuController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    @RequiresPermissions("mallproduct:sysrolemenu:info")
     public R info(@PathVariable("id") Long id){
 		SysRoleMenuEntity sysRoleMenu = sysRoleMenuService.getById(id);
 
@@ -58,7 +56,6 @@ public class SysRoleMenuController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("mallproduct:sysrolemenu:save")
     public R save(@RequestBody SysRoleMenuEntity sysRoleMenu){
 		sysRoleMenuService.save(sysRoleMenu);
 
@@ -69,7 +66,6 @@ public class SysRoleMenuController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("mallproduct:sysrolemenu:update")
     public R update(@RequestBody SysRoleMenuEntity sysRoleMenu){
 		sysRoleMenuService.updateById(sysRoleMenu);
 
@@ -80,7 +76,6 @@ public class SysRoleMenuController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("mallproduct:sysrolemenu:delete")
     public R delete(@RequestBody Long[] ids){
 		sysRoleMenuService.removeByIds(Arrays.asList(ids));
 

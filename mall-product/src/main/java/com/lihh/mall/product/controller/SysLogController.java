@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.lihh.mall.product.entity.SysLogEntity;
 import com.lihh.mall.product.service.SysLogService;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,6 @@ public class SysLogController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("mallproduct:syslog:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = sysLogService.queryPage(params);
 
@@ -47,7 +46,6 @@ public class SysLogController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    @RequiresPermissions("mallproduct:syslog:info")
     public R info(@PathVariable("id") Long id){
 		SysLogEntity sysLog = sysLogService.getById(id);
 
@@ -58,7 +56,6 @@ public class SysLogController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("mallproduct:syslog:save")
     public R save(@RequestBody SysLogEntity sysLog){
 		sysLogService.save(sysLog);
 
@@ -69,7 +66,6 @@ public class SysLogController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("mallproduct:syslog:update")
     public R update(@RequestBody SysLogEntity sysLog){
 		sysLogService.updateById(sysLog);
 
@@ -80,7 +76,6 @@ public class SysLogController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("mallproduct:syslog:delete")
     public R delete(@RequestBody Long[] ids){
 		sysLogService.removeByIds(Arrays.asList(ids));
 

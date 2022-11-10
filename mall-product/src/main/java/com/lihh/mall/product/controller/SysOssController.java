@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 import com.lihh.mall.product.entity.SysOssEntity;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,6 @@ public class SysOssController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("mallproduct:sysoss:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = sysOssService.queryPage(params);
 
@@ -47,7 +46,6 @@ public class SysOssController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    @RequiresPermissions("mallproduct:sysoss:info")
     public R info(@PathVariable("id") Long id){
 		SysOssEntity sysOss = sysOssService.getById(id);
 
@@ -58,7 +56,6 @@ public class SysOssController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("mallproduct:sysoss:save")
     public R save(@RequestBody SysOssEntity sysOss){
 		sysOssService.save(sysOss);
 
@@ -69,7 +66,6 @@ public class SysOssController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("mallproduct:sysoss:update")
     public R update(@RequestBody SysOssEntity sysOss){
 		sysOssService.updateById(sysOss);
 
@@ -80,7 +76,6 @@ public class SysOssController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("mallproduct:sysoss:delete")
     public R delete(@RequestBody Long[] ids){
 		sysOssService.removeByIds(Arrays.asList(ids));
 
