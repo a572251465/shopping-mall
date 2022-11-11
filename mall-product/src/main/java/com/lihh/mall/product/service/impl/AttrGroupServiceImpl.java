@@ -1,12 +1,12 @@
 package com.lihh.mall.product.service.impl;
 
+import com.lihh.mall.commons.utils.Query;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lihh.mall.commons.utils.PageUtils;
-import com.lihh.common.utils.Query;
 
 import com.lihh.mall.product.dao.AttrGroupDao;
 import com.lihh.mall.product.entity.AttrGroupEntity;

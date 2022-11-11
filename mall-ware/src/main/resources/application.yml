@@ -1,4 +1,30 @@
-# 端口
+spring:
+  application:
+    name: mall-ware
 
+
+  # mysql 配置
+  datasource:
+    password: root
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.56.10:3306/mall-wms
+
+  # nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.56.10:8848
+
+# 设置端口
 server:
   port: 8050
+
+# mybatis 配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+
+  # 设置主键自增
+  global-config:
+    db-config:
+      id-type: auto
