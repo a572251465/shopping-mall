@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import com.lihh.mall.product.entity.BrandEntity;
@@ -22,6 +23,7 @@ import com.lihh.mall.commons.utils.R;
  * @email 2495041749@qq.com
  * @date 2022-11-10 17:03:35
  */
+@RefreshScope
 @RestController
 @RequestMapping("product/brand")
 public class BrandController {
