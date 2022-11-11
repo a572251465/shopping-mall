@@ -31,6 +31,13 @@ public class BrandController {
     @Autowired
     private BrandService brandService;
 
+    @RequestMapping(value = "/all")
+    public R queryAllBrand() {
+        BrandEntity brandEntity = new BrandEntity();
+        brandEntity.setName("华为");
+        return R.ok().put("brands", brandEntity);
+    }
+
     /**
      * 列表
      */

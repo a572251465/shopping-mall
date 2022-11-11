@@ -4,12 +4,9 @@ import java.util.Arrays;
 import java.util.Map;
 
 
+import com.lihh.mall.order.fegin.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.lihh.mall.order.entity.OrderEntity;
 import com.lihh.mall.order.service.OrderService;
@@ -30,6 +27,8 @@ import com.lihh.mall.commons.utils.R;
 public class OrderController {
     @Autowired
     private OrderService orderService;
+    @Autowired
+    private ProductService productService;
 
     /**
      * 列表
@@ -39,6 +38,11 @@ public class OrderController {
         PageUtils page = orderService.queryPage(params);
 
         return R.ok().put("page", page);
+    }
+
+    @GetMapping(value = "/products")
+    public R queryProduct() {
+        return R.ok().put("products", productService.queryAllBrand());
     }
 
 
