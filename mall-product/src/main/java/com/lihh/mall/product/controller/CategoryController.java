@@ -1,6 +1,7 @@
 package com.lihh.mall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 
@@ -39,6 +40,12 @@ public class CategoryController {
         PageUtils page = categoryService.queryPage(params);
 
         return R.ok().put("page", page);
+    }
+
+    @RequestMapping("/listWithTree")
+    public R listTree() {
+        List<CategoryEntity> categoryEntities = categoryService.queryPageWithTree();
+        return R.ok().put("data", categoryEntities);
     }
 
 

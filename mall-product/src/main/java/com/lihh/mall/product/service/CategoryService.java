@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.lihh.mall.commons.utils.PageUtils;
 import com.lihh.mall.product.entity.CategoryEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +17,12 @@ import java.util.Map;
 public interface CategoryService extends IService<CategoryEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    /**
+     * 按照Tree的格式 来查询品牌三级分类
+     * @author lihh
+     * @return list
+     */
+    List<CategoryEntity> queryPageWithTree();
 }
 
