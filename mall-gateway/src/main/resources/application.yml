@@ -12,6 +12,12 @@ spring:
 
     gateway:
       routes:
+        - id: mall-product-route
+          uri: lb://mall-product
+          predicates:
+            - Path=/app/pms/**
+          filters:
+            - RewritePath=/app/pms/(?<segment>/?.*), /product/$\{segment}
         - id: renren-fast
           uri: lb://renren-fast
           predicates:
