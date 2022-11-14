@@ -12,7 +12,9 @@ spring:
 
     gateway:
       routes:
-        - id: gateway_test
-          uri: http://www.baidu.com
+        - id: renren-fast
+          uri: lb://renren-fast
           predicates:
-            - Query=name,lihh
+            - Path=/app/**
+          filters:
+            - RewritePath=/app/(?<segment>/?.*), /renren-fast/$\{segment}
