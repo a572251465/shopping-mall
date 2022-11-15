@@ -11,9 +11,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mall-product</name>
 	<description>mall-product</description>
-	<properties>
-		<spring-boot-dependencies.version>2.4.12</spring-boot-dependencies.version>
-	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.lihh.shopping</groupId>
@@ -33,18 +31,6 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring-boot-dependencies.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<build>
 		<plugins>
