@@ -30,21 +30,11 @@ public class BrandController {
     @Autowired
     private BrandService brandService;
 
-    @Value("${user.userName}")
-    private String userName;
-    @Value("${user.age}")
-    private Integer age;
-
     @RequestMapping(value = "/all")
     public R queryAllBrand() {
         BrandEntity brandEntity = new BrandEntity();
         brandEntity.setName("华为");
         return R.ok().put("brands", brandEntity);
-    }
-
-    @GetMapping(value = "/queryUser")
-    public R queryUser() {
-        return R.ok().put("userName", userName).put("age", age);
     }
 
     /**
